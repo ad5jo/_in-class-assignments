@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>calculator input</title>
+  </head>
+  <body>
+
+    <h1>Open the console to see the magic!</h1>
+
+    <script>
+
+      // Creating our calculator object.
+      var calculator = {
+
+        // Properties of our calculator object.
+        make_vars_here: "the var val",
+
+        m_equals: function(s_input_4) {
+          console.log("m_equals")
+        },
+        m_operator: function(s_input_2) {
+          console.log("m_operator")
+        },
+        m_number: function(s_input_1, s_input_3) {
+          console.log("m_number")
+        }
+
+      }
+     
+
+    function input (s_type, s_input_1, s_input_2,s_input_3, s_input_4) {
+ 
+    if (s_type === "="){
+      calculator.m_equals  (s_input_4);
+    }
+    else if(s_type === "number")
+    {
+      calculator.m_number (s_input_1, s_input_3);
+    }
+
+    else if(s_type === "operator")
+    {
+      calculator.m_operator (s_input_2);
+    }
+    
+    else{
+          // do nothing
+        }
+    }
+
+
+
+
+
+    </script>
+  </body>
+</html>

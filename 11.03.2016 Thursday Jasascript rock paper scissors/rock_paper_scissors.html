@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>in class</title>
+  </head>
+  <body>
+    <h1>Rock Paper Scissors</h1>
+	<p>Please enter R, P or S?</p>
+
+<input id="numb">
+
+<button type="button" onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+
+
+    <script>
+
+   var i_computer_score = 0;
+   var i_player_score = 0;
+   var i_conmputers_number = 0;
+  var b_play_again = true;
+  var 
+  var i_number_to_play_to = 10000;
+  var s_players_letter = "";
+  var a_letters =["r","p","s"];
+  for (i_cnt = 0; i_cnt < i_number_to_play_to; )
+  {
+  	i_computers_number = Math.floor((Math.random() * 3) + 1);
+  	s_computers_letter = a_letters[i_computers_number];
+
+
+	if (s_players_letter === "r" || s_players_letter === "p" || s_players_letter === "s"){
+		if(s_players_letter === s_computers_letter){}
+		else if (s_players_letter > s_computers_letter){}
+
+	}
+
+  	b_play_again = 
+
+  }
+
+
+    document.getElementById("demo").innerHTML = text;
+}
+
+document.onkeyup = function(event) {
+//alert("button presssed");
+consol.log(event.key);
+s_players_letter = event.key;
+};
+
+    </script>
+
+  </body>
+</html>

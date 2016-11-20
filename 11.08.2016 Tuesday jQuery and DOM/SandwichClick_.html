@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Clicked</title>
+
+  <!-- Added link to the jQuery Library -->
+  <script src="https://code.jquery.com/jquery-2.2.3.js" integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <h1>Click to Eat Sandwich</h1>
+  <h3 id="pbj">Peanut Butter Jelly</h3>
+  <h3 id="grillcheese">Grilled Cheese</h3>
+  <h3 id="roastbeef">Roast Beef</h3>
+
+  <script type="text/javascript">
+
+    // This document.ready isn't necessary in this example... but is needed in cases where the HTML is complex.
+    // This code makes sure that the Javascript doesn't get run until the HTML is finished loading
+    // It's useful to become familiar with now.
+
+    $(document).ready(function() {
+
+      // VARIABLES
+      // ====================================================================
+      // Here we create variables for tracking the number of sandwiches eaten
+      // ...
+      var pbj_eaten = 0;
+      var gc_eaten = 0;
+      var rb_eaten = 0;
+
+      var pbj = $("#pbj");
+      var gc_ = $("#grillcheese");
+      var rb_ = $("#roastbeef");
+
+
+//$( "#target" )
+// pbj.click(function() {
+//   alert( "Handler for .click() called." );
+// });
+
+      pbj.click(function(){
+        alert('not enough pbj');
+        pbj_eaten++;
+        console.log(pbj_eaten);
+        alert('you eat ' + pbj_eaten.toString() + " Peanut Butter and Jelly");
+      });
+
+      gc_.click(function(){
+        alert('so smelly');
+        gc_eaten++;
+        console.log(gc_eaten);
+        alert('you eat ' + gc_eaten.toString() + " Grilled Cheese");
+      });
+
+      rb_.click(function(){
+        alert('roadkill');
+        rb_eaten++;
+        console.log(rb_eaten);
+        alert('you eat ' + rb_eaten.toString() + " Roast Beef");
+      });
+
+      // ...
+
+      // FUNCTIONS
+      // ====================================================================
+      // Here we create various on "click" functions which capture the clicks
+      // Inside each click event is the code to create an alert, update the counter, then show the updated count.
+      // ...
+// Instructions:
+
+// -Add in the missing code such that clicking any of the sandwiches causes…
+
+// -An alert message to popup saying something snarky about the sandwich type.
+
+// -A second alert message that displays to the user the number of that specific sandwich they’ve eaten.
+
+// -HINT: You will need counter variables.
+
+      // ...
+
+    });
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+Bubble Sort
+
+Write a function that sorts an array of numbers in order. You can do this with the Bubble Sort algorithm. If you are unfamiliar with Bubble Sort, use Google to read up on the concept. Spend about 10 minutes pseudocoding your solution before writing any JavaScript.
+
+Use the array provided below. Display the unsorted array in the #start div of index.html.
+
+When the user clicks the button in index.html, the sorted result should be displayed in the #result div.
+
+DO NOT USE JQUERY TO SELECT ELEMENTS. ONLY USE VANILLA JS.
+
