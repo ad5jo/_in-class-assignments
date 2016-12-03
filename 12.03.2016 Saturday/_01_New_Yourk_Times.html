@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>New York Times</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h1>New York Times Search</h1>
+
+      <!-- We'll be dumping our JSON contents in here -->
+      <div id="results-view"></div>
+
+      <!-- This form will be where users input data about the search -->
+      <form id="movie-form">
+
+        <label for="search-input">Search Term</label></br>
+        <input type="text" id="search-input"><br>
+
+
+        <label for="search-input">Number of records to retrieve</label></br>
+        <input type="text" id="number-input"><br>
+
+
+
+        <label for="search-input">Start Year (Optional)</label></br>
+        <input type="text" id="year-start-input"><br>
+
+
+
+        <label for="search-input">End Year (Optional)</label></br>
+        <input type="text" id="year-end-input"><br>
+
+
+
+        <!-- This button will trigger our AJAX call -->
+
+        <input id="find-info" type="submit" value="Start Search">
+
+        <input id="input-clear" type="submit" value="Clear Results">
+
+
+      </form>
+
+      <script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+
+      
+      <script type="text/javascript">
+
+      // Here's your API Key for the Most Popular API: f1c79e18134a49768307f34294a7d282
+
+      // ttp://api.nytimes.com/svc/search/v1/article?format=json&query=smoking&api-key=####
+
+        // This .on("click") function will trigger the AJAX Call
+        $("#find-info").on("click", function(event) {
+          debugger;
+          console.log ("line 54")
+          // Preventing the submit button from trying to submit the form
+          // We're optionally using a form so the user may hit Enter to search instead of clicking the button
+          event.preventDefault();
+
+          // Here we grab the text from the input box
+          var s_search = $("#search-input").val();
+          var s_number = $("#number-input").val();
+          var s_year_start = $("#year-start-input").val();
+          var s_year_end = $("#year-end-input").val();
+
+          // Here we construct our URL
+          var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json&query=" + s_search + "&api-key=f1c79e18134a49768307f34294a7d282";
+          // + "&y=&plot=short&r=json";
+
+          // Write code between the dashes below to hit the queryURL with $ajax, then take the response data
+          // and display it in the div with an id of results-view
+          
+          // YOUR CODE GOES IN THESE DASHES. DO NOT MANUALLY EDIT THE HTML ABOVE
+
+          // =================================================================
+
+          // CODE GOES HERE
+          $.ajax({ url: queryURL, method: "GET"}).done(function (response)
+          {
+            $("#results-view").text(JSON.stringify(response));
+          });
+          
+          // =================================================================
+        });
+
+      </script>
+
+
+    </div>
+  </body>
+</html>
