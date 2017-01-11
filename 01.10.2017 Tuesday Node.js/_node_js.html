@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <title>Test code</title>
+</head>
+
+<body>
+        <h1>_add_remove_div_using_submit_form.html</h1>
+        <p>Two examples here:</p>
+        <p>1. How radio buttons are read. Press the link to submit Form.</p>
+        <p>2. register a button and call a function when clicked. Press button.</p>
+        <p>3. javascript method of adding a button using jQuery. Press button.</p>
+
+        </br>
+
+
+        <form action="#n" name="theForm">
+            <label for="gender">What do you want to do: </label>
+            <input type="radio" name="add_or_remove" value="1" checked> Add
+            <input type="radio" name="add_or_remove" value="0" > Remove<br><br>
+            <a href="javascript: submitForm()">1. Click here to add a div and read the value of the radio button</A>
+        </form>
+
+        </br>        
+        </br>
+        <button onclick="myFunction()">2. Click here to remove the debug divs, only one each</button>
+        </br>
+        </br>
+
+        <script  type = "text/javascript">
+
+
+          var s_done_button = "<button class=\"btn btn-primary btn-sm\" id=\"hello_button\" role=\"button\">hello add</button> ";
+          $("body").append(s_done_button);
+
+          s_done_button = "<button class=\"btn btn-primary btn-sm\" id=\"remove_hello_button\" role=\"button\">hello remove</button> ";
+          $("body").append(s_done_button);
+
+		$("#hello_button").click(
+  			function(){
+    		$("body").append("<div id=\"hello\">" +"hello" + "</div>");
+  		});
+
+		$("#remove_hello_button").click(
+  			function(){
+    		$("#hello").remove();
+  		});
+
+
+            function submitForm() {
+            	var s_i_val = $('input[name="add_or_remove"]:checked').val();
+                if (s_i_val === "1")
+                {
+                	$("body").append("<div id=debug >" + "1 DEBUG: val is " + s_i_val + "</div>");
+                }
+                else if (s_i_val === "0")
+                {
+                	$("body").append("<div id=debug >" + "0 DEBUG: val is " + s_i_val + "</div>");
+                }
+
+            }
+
+
+            function myFunction() {
+                $("#demo").text("hello");
+                $("#debug").remove();
+            }
+
+
+        </script>
+
+    </body>
+</html>
+
