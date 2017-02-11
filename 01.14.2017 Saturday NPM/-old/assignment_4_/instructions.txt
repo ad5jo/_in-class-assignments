@@ -1,0 +1,36 @@
+Instructions
+
+Using the code sent to you earlier as a reference and using the code provided to you as a starter, create a Node application which takes in a movie name as a command line argument then uses the OMDB API to retrieve and return the release date to the console.
+
+For this activity you have two options:
+
+Easier: Require that the user provide a movie with a single word in the title (ex: Cinderella)
+
+Harder: Allow the user to provide a movie with as many words as possible (ex: Forrest Gump).
+
+Hint: Start by figuring out what your API URL should be then use the starter code as a guide.
+
+Hint: Remember to npm install request or else your code will not work no matter what
+
+{
+"Title": "Blade",
+"Year": "1998",
+"Rated": "R",
+"Released": "21 Aug 1998",
+"Runtime": "120 min",
+"Genre": "Action, Horror",
+"Director": "Stephen Norrington",
+"Writer": "David S. Goyer",
+"Actors": "Wesley Snipes, Stephen Dorff, Kris Kristofferson, N'Bushe Wright",
+"Plot": "A half-vampire, half-mortal man becomes a protector of the mortal race, while slaying evil vampires.",
+"Language": "English, Russian",
+"Country": "USA",
+"Awards": "4 wins & 8 nominations.",
+"Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTQ4MzkzNjcxNV5BMl5BanBnXkFtZTcwNzk4NTU0Mg@@._V1_SX300.jpg",
+"Metascore": "45",
+"imdbRating": "7.1",
+"imdbVotes": "196,502",
+"imdbID": "tt0120611",
+"Type": "movie",
+"Response": "True"
+}

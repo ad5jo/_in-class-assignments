@@ -1,0 +1,24 @@
+Instructions:
+
+Starting from a blank file, create a Node-based command-line application that takes in a series of numbers from the user and returns the numbers sorted in ascending order.
+
+Note: Feel free to use Stack Overflow or Google to find the code for sorting integers numerically.
+
+Use .slice(x) to get a chunk of an array
+
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);
+The result of citrus will be:
+
+Orange,Lemon
+
+map is run this on each element and creat a new array 
+
+var numbers = (process.argv).slice(2);
+
+function sorting(a,b) {
+    return a - b;
+}
+
+var solution = numbers.map(parseFloat).sort(sorting);
+console.log(solution);`
