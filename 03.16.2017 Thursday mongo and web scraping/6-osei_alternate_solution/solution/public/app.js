@@ -1,0 +1,62 @@
+/* MongoDB Zoo Site (18.2.9)
+ * Front-End
+ * ========================= */
+
+// 1: On Load
+// ==========
+
+// The first thing this js file will do: ask the back end for a json with all animals
+$.getJSON("/all", function(data) {
+  // For each entry of that json...
+  for (var i = 0; i < data.length; i++) {
+    // Append each of the animal's properties to the table
+    $("#results").append("<tr><td>" + data[i].name + "</td>" +
+                         "<td>" + data[i].numlegs + "</td>" +
+                         "<td>" + data[i].class + "</td>" +
+                         "<td>" + data[i].weight + "</td>" +
+                         "<td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
+  }
+});
+
+
+// 2: Button Interactions
+// ======================
+
+// When user clicks the weight sort button, display table sorted by weight
+$("#weightsort").on("click", function() {
+  // First, empty the table
+  // Then re-append the header of the table
+  // Now do an api call to the back end for a json with all animals, sorted by weight
+  $.getJSON("/weight", function(data) {
+    // For each entry of that json...
+    $("#results tbody").empty();
+    for (var i = 0; i < data.length; i++) {
+      // Append each of the animal's properties to the table
+      $("#results").append("<tr><td>" + data[i].name + "</td>" +
+                           "<td>" + data[i].numlegs + "</td>" +
+                           "<td>" + data[i].class + "</td>" +
+                           "<td>" + data[i].weight + "</td>" +
+                           "<td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
+    }
+  });
+});
+
+// When user clicks the name sort button, display the table sorted by name
+$("#namesort").on("click", function() {
+  // First empty results table
+  
+  // Then re-append the header of the table
+  // Now do an api call to the back end for a json with all animals, sorted by name
+  $.getJSON("/name", function(data) {
+    $("#results tbody").empty();
+    // For each entry of that json...
+    for (var i = 0; i < data.length; i++) {
+      // Append each of the animal's properties to the table
+      $("#results").append("<tr><td>" + data[i].name + "</td>" +
+                           "<td>" + data[i].numlegs + "</td>" +
+                           "<td>" + data[i].class + "</td>" +
+                           "<td>" + data[i].weight + "</td>" +
+                           "<td>" + data[i].whatIWouldReallyCallIt + "</td></tr>");
+    }
+  });
+});

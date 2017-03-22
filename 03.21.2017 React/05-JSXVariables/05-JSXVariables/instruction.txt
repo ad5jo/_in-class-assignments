@@ -1,0 +1,9 @@
+Instructions:
+
+Modify the skeleton code to take in a hard-coded DOB and then use MomentJS to render the age of that person.
+
+Display that DOB and age in the browser using JSX.
+
+Hint: You will need to npm install MomentJS and utilize it inside of your app.js file.
+
+Note: Yep. We know you are rusty on MomentJS.
