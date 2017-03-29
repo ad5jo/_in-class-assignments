@@ -1,0 +1,13 @@
+Instructions:
+
+Create a React application composed of 5 components (Main, Adder, Imgr, Multiplier, Randomizer).
+
+Each of the components should respond differently in response to the button clicks taking place from the Main parent.
+
+One of the components 
+1. adds the click counts, 
+2. another multiplies, 
+3. another provides a random number, 
+4. and a final one chooses a random image from an array of images.
+
+Hint: You may want to look into the React function: componentWillReceiveProps

@@ -1,0 +1,18 @@
+Instructions:
+
+Spend the next 35 minutes taking the design provided to you and breaking it into routed child and grandchild components.
+
+As a starting point, create a basic route that flips between two panels on button click.
+
+As a bonus, nest buttons and panels inside one of these child panels. The buttons should flip between these "grandchild" panels.
+
+This may be tricky! Fight through it!
+1. Space Jam app runs?
+2. make sur you have the template code
+3. change info and comments to Child 1 and Child 2
+	1. copy html from the template
+	2. change the file names
+	3. change the names of the paths and the components in the results
+	4. make sure the links match the paths
+4. Setup grandchildren
+

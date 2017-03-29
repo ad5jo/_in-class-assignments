@@ -1,0 +1,13 @@
+Instructions:
+
+Take a few moments to discuss the code provided to your partner. Make sure that each of you understand the syntax for:
+
+1. Creating a state associated with a component.
+
+2. Referencing the value of that state in the component itself.
+
+3. Passing that state value to a child.
+
+4. Accessing that parent's state value in the child as a prop.
+
+Be prepared to share with the class.
