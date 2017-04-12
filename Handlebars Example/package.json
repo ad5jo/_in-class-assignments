@@ -1,0 +1,24 @@
+{
+  "name": "dave_durkee",
+  "version": "1.0.0",
+  "description": "dave",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "dave durkee",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "compression": "^1.6.2",
+    "express": "^4.15.2",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.5",
+    "hogan-express": "^0.5.2",
+    "http": "0.0.0",
+    "method-override": "^2.3.8",
+    "mysql": "^2.13.0",
+    "path": "^0.12.7"
+  }
+}

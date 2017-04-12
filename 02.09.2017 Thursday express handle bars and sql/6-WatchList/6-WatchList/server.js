@@ -25,7 +25,7 @@ var mysql = require("mysql");
 var connection = mysql.createConnection({
   host: "localhost",
   user: "root",
-  password: "",
+  password: "Starbucks9",
   database: "movie_planner_db"
 });
 
